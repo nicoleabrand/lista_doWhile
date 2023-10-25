@@ -11,9 +11,26 @@
     */
 
     //Entrada
-
-
-    //Processamento
+    let nome = prompt(`Informe seu nome`)
+    while (nome.length <= 3){
+        nome = prompt(`Informe seu nome`)
+    };
+    let idade = Number(prompt(`Informe sua idade`))
+    while (idade < 0 || idade > 150){
+        idade = Number((prompt(`Informe sua idade`)))
+    };
+    let salario = Number(prompt(`Informe seu salário`))
+    while (salario < 0){
+        salario = Number(prompt((`Informe seu salário`)))
+    };
+    let sexo = prompt(`Informe seu sexo com "M" ou "F"`).toUpperCase();
+    while (sexo!="F" && sexo!="M"){
+        sexo = prompt(`Informe seu sexo com "M" ou "F"`).toUpperCase();
+    };
+    let ec = prompt(`Informe seu estado civil com 's', 'c', 'v', 'd'`).toUpperCase();
+    while (ec!="S" && ec!="C" && ec!="V" && ec!="D"){
+        ec = prompt(`Informe seu estado civil com 's', 'c', 'v', 'd'`).toUpperCase();
+    };
 
 
     //Saída

@@ -6,8 +6,12 @@
     */
 
     //Entrada
-
-
+    let senha= Number(prompt(`Informe uma senha`))
+    while(senha.toString().length!=4){
+        alert(`Informe uma senha com quatro dígitos!`);
+        senha= Number(prompt(`Informe uma senha`))
+    }
+    alert(`Senha correta`)
     //Processamento
 
 

@@ -6,7 +6,13 @@
     */
 
     //Entrada
-
+    let user = prompt("Informe um usuário");
+    let senha = prompt(`Informe uma senha`);
+    do {
+        alert(`Erro! Não é possível ter user e senha iguais, informe novamente.`)
+        user = prompt("Informe um usuário");
+        senha = prompt(`Informe uma senha`);
+    } while (user == senha);
 
     //Processamento
 
