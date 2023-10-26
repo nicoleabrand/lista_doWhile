@@ -13,8 +13,30 @@
     */
 
     //Entrada
+    let idades = [];
+    let sexos = [];
+    let salarios = [];
 
-
+    do {
+        let idade = Number(prompt(`Informe sua idade`));
+        if(idade < 0)break
+        idades.push(idade)
+        let sexo = prompt(`Informe seu sexo M(masculino) ou F(feminino)`).toUpperCase()
+        sexos.push(sexo)
+        let salario = Number(prompt(`Informe seu salario`))
+        salarios.push(salario)
+    } while (true)
+    let maioridade = Math.max(...idades)
+    let menoridade = Math.min(...idades)
+    let mediasalarios = salarios.reduce((soma, valor) => soma + valor, 0) / salarios.length
+    let pessoaMenorsalariosexo = sexos[salarios.indexOf(Math.min(...salarios))]
+    let pessoaMenorsalarioidade = idades[salarios.indexOf(Math.min(...salarios))]
+    let mulheres= 0;
+    if(sexos.slice(0)=="F")
+    mulheres++
+    alert(`
+    A média dos salários do grupo: ${mediasalarios};\nA maior idade: ${maioridade}\nA menor idade: ${menoridade};\nA quantidade de mulheres na região: ${mulheres};\nA pessoa que possui o menor salário é do sexo ${pessoaMenorsalariosexo} e a idade: ${pessoaMenorsalarioidade};
+`)
     //Processamento
 
 
